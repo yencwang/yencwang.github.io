@@ -122,9 +122,10 @@ main {
   padding: 0 20px;
 }
 
+.research-container h1 {
+  margin-bottom: 40px;  /* 讓標題與下方計畫之間多一些空間 */
+  font-weight: 600;     /* 保持字重 */
 
-.research-page h1 {
-  margin-bottom: 40px;
 }
 
 /* Research 區塊 */
