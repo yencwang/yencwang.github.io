@@ -123,18 +123,30 @@ main {
 }
 
 /* Research 區塊 */
+/* 整體容器 */
 .research-container {
-  display: flex;
-  flex-direction: row;          /* 圖片在左，文字在右 */
-  align-items: center;
-  justify-content: space-between;
   max-width: 1000px;
-  margin: 40px auto;            /* 各計畫之間上下間距 */
-  padding: 20px 40px;
-  gap: 40px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
-/* 左側圖片 */
+/* 每個研究計畫的外框 */
+.research-project {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 60px; /* 每個計畫之間的間距 */
+}
+
+/* 文字部分 */
+.research-text {
+  flex: 1.5;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* 圖片部分 */
 .research-image {
   flex: 1;
   display: flex;
@@ -142,21 +154,17 @@ main {
 }
 
 .research-image img {
-  max-width: 220px;            /* 與首頁 profile.jpg 類似大小 */
+  max-width: 250px;
   border-radius: 10px;
   object-fit: cover;
 }
 
-/* 右側文字 */
-.research-text {
-  flex: 2;
-  font-size: 16px;
-  line-height: 1.6;
-}
-
-.research-text h2 {
-  margin-bottom: 10px;
-  font-size: 20px;
+/* 小螢幕手機版調整為上下排列 */
+@media (max-width: 768px) {
+  .research-project {
+    flex-direction: column;
+    text-align: center;
+  }
 }
 
 
