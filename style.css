@@ -122,6 +122,11 @@ main {
   padding: 0 20px;
 }
 
+
+.research-page h1 {
+  margin-bottom: 40px;
+}
+
 /* Research 區塊 */
 /* 整體容器 */
 .research-container {
