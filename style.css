@@ -138,10 +138,11 @@ main {
 
 /* 活動標題 */
 .activity-container h1 {
-  text-align: center;
+  text-align: left;
   margin-bottom: 40px;
   font-size: 28px;
 }
+
 
 /* 活動網格 */
 .activity-grid {
