@@ -128,6 +128,55 @@ main {
 
 }
 
+
+/* 活動頁主要容器 */
+.activity-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+/* 活動標題 */
+.activity-container h1 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 28px;
+}
+
+/* 活動網格 */
+.activity-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* 三欄自適應 */
+  gap: 30px;
+}
+
+/* 每個活動項目 */
+.activity-item {
+  text-align: center;
+}
+
+.activity-item img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.activity-item img:hover {
+  transform: scale(1.03);
+}
+
+.activity-item p {
+  margin-top: 10px;
+  font-size: 15px;
+  color: #444;
+}
+
+
+
+
 /* Research 區塊 */
 /* 整體容器 */
 .research-container {
