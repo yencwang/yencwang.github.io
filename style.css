@@ -132,46 +132,42 @@ main {
 
 }
 
-/* 活動頁主要容器 */
 .activity-container {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 60px 20px;
+  padding: 40px 20px;
+  text-align: center;
 }
 
-/* 活動標題 */
+
 .activity-container h1 {
-  text-align: left;
   margin-bottom: 40px;
-  font-size: 28px;
 }
 
 
-/* 活動網格 */
 .activity-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* 三欄自適應 */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* 自動排最多三個 */
   gap: 30px;
+  justify-items: center;
 }
 
-/* 每個活動項目 */
 .activity-item {
+  width: 100%;
+  max-width: 320px; /* 限制每張大小讓三張能排進一行 */
   text-align: center;
 }
 
 .activity-item img {
   width: 100%;
-  aspect-ratio: 1 / 1;      /* 🔥 讓圖片保持正方形 */
-  height: 220px;
-  object-fit: cover;
+  aspect-ratio: 1 / 1;   /* ✅ 正方形 */
+  object-fit: cover;      /* ✅ 自動裁切 */
   border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
-
-
-
-
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  display: block;
 }
+
+
 
 .activity-item img:hover {
   transform: scale(1.03);
