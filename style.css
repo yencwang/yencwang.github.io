@@ -129,6 +129,9 @@ main {
 }
 
 
+
+}
+
 /* 活動頁主要容器 */
 .activity-container {
   max-width: 1100px;
@@ -158,11 +161,16 @@ main {
 
 .activity-item img {
   width: 100%;
+  aspect-ratio: 1 / 1;      /* 🔥 讓圖片保持正方形 */
   height: 220px;
   object-fit: cover;
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   transition: transform 0.3s ease;
+
+
+
+
 }
 
 .activity-item img:hover {
