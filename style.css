@@ -1,5 +1,7 @@
 ```css
-/* ===== 全站統一字體與排版 ===== */
+/* =========================================================
+   全站基本設定
+   ========================================================= */
 
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap');
 
@@ -14,7 +16,9 @@ body {
 }
 
 
-/* ===== Header 區塊 ===== */
+/* =========================================================
+   Header
+   ========================================================= */
 
 .site-header {
   display: flex;
@@ -33,61 +37,9 @@ body {
 }
 
 
-/* ===== Home / Intro 區塊 ===== */
-
-.intro-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  max-width: 1000px;
-  margin: 60px auto 61px;
-  padding: 0 40px;
-  gap: 40px;
-}
-
-/* 左側文字區域 */
-
-.intro-text {
-  flex: 2;
-  font-size: 16px;
-  line-height: 1.8;
-  max-width: 600px;
-}
-
-.intro-text h1 {
-  margin-top: 0;
-  margin-bottom: 20px;
-  font-size: 24px;
-  font-weight: bold;
-}
-
-
-/* 全站標題 */
-
-h1 {
-  font-size: 24px;
-  font-weight: 600;
-  margin-bottom: 15px;
-}
-
-
-/* 右側圖片區域 */
-
-.intro-image {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-}
-
-.intro-image img {
-  max-width: 280px;
-  border-radius: 12px;
-  object-fit: cover;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-
-/* ===== 導航列 ===== */
+/* =========================================================
+   Navigation
+   ========================================================= */
 
 .navbar a {
   margin-left: 20px;
@@ -108,7 +60,21 @@ h1 {
 }
 
 
-/* ===== 一般內容區塊 ===== */
+/* =========================================================
+   全站一般標題
+   ========================================================= */
+
+h1 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 40px;
+}
+
+
+/* =========================================================
+   一般 Main
+   ========================================================= */
 
 main {
   max-width: 900px;
@@ -117,21 +83,155 @@ main {
 }
 
 
-/* ===== Research ===== */
+/* =========================================================
+   Home / Intro
+   ========================================================= */
 
-.research-container {
+.intro-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
   max-width: 1000px;
-  margin: 0 auto;
+  margin: 60px auto 61px;
+  padding: 0 40px;
+  gap: 40px;
+}
+
+.intro-text {
+  flex: 2;
+  font-size: 16px;
+  line-height: 1.8;
+  max-width: 600px;
+}
+
+.intro-text h1 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.intro-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.intro-image img {
+  max-width: 280px;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+/* =========================================================
+   統一內頁容器
+   Activity / Research / Teaching / CV
+   ========================================================= */
+
+.page-container {
+  max-width: 1000px;
+  margin: 40px auto;
   padding: 20px;
 }
 
-.research-container h1 {
-  margin-bottom: 40px;
+
+/* 所有內頁標題統一 */
+
+.page-container h1 {
+  font-size: 24px;
   font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 40px;
 }
 
 
-/* 每個研究計畫 */
+/* =========================================================
+   Activity
+   ========================================================= */
+
+.activity-container {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+
+/* Activity 標題 */
+
+.activity-container h1 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 40px;
+  text-align: left;
+}
+
+
+/* Activity 三欄 */
+
+.activity-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+
+/* 每個 Activity */
+
+.activity-item {
+  text-align: center;
+}
+
+
+/* Activity 圖片 */
+
+.activity-item img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.activity-item img:hover {
+  transform: scale(1.03);
+}
+
+
+/* Activity 說明文字 */
+
+.activity-item p {
+  margin-top: 10px;
+  font-size: 15px;
+  color: #444;
+}
+
+
+/* =========================================================
+   Research
+   ========================================================= */
+
+.research-container {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+
+/* Research 標題 */
+
+.research-container h1 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 40px;
+}
+
+
+/* Research 每個計畫 */
 
 .research-project {
   display: flex;
@@ -142,7 +242,7 @@ main {
 }
 
 
-/* 研究文字 */
+/* Research 文字 */
 
 .research-text {
   flex: 1.5;
@@ -151,7 +251,7 @@ main {
 }
 
 
-/* 研究圖片 */
+/* Research 圖片 */
 
 .research-image {
   flex: 1;
@@ -166,63 +266,81 @@ main {
 }
 
 
-/* ===== Activity 頁面 ===== */
+/* =========================================================
+   Teaching
+   ========================================================= */
 
-
-/* 活動頁主要容器 */
-
-.activity-container {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 60px 20px;
+.teaching-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  max-width: 1000px;
+  min-height: 80vh;
+  margin: 40px auto;
+  padding: 20px;
 }
 
 
-/* Activity 標題 */
+/* Teaching 標題如果 HTML 裡直接有 h1 */
 
-.activity-container h1 {
-  text-align: left;
-  margin-bottom: 40px;
-  font-size: 28px;
-}
-
-
-/* Activity 網格
-   桌面版固定三張一排 */
-
-.activity-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-}
-
-
-/* 每個活動項目 */
-
-.activity-item {
-  text-align: center;
-}
-
-
-/* Activity 圖片
-   保持真正的正方形 */
-
-.activity-item img {
+.teaching-container h1 {
   width: 100%;
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
+  font-size: 24px;
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 40px;
 }
 
 
-/* 滑鼠移到圖片時 */
+/* 課程框 */
 
-.activity-item img:hover {
-  transform: scale(1.03);
+.course-card {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 16px;
+  padding: 30px;
+  max-width: 700px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 
-/
+/* 課名 */
+
+.course-title {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+
+/* 課程說明 */
+
+.course-description {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+
+/* 課程按鈕 */
+
+.course-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+
+/* 按鈕 */
+
+.btn {
+  background-color: #2f4f4f;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3s
 ```
